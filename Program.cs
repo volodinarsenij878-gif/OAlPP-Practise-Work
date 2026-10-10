@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp76
+namespace ConsoleApp77
 {
     internal class Program
     {
