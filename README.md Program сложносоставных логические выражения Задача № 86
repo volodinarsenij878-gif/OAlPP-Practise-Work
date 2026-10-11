@@ -1,0 +1,17 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program86
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            bool result = ((10 > 5 ? true : false) ^ (3 > 8 ? true : false)) && !false;
+            Console.WriteLine(result); // True
+        }
+    }
+    }
