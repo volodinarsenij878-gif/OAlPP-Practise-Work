@@ -1,0 +1,27 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program15
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите пароль (число): ");
+            if (int.TryParse(Console.ReadLine(), out int pwd))
+            {
+                if (pwd == 1234)
+                    Console.WriteLine("Вход выполнен");
+                else
+                    Console.WriteLine("Неверный пароль");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода.");
+            }
+        }
+    }
+    }
