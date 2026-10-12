@@ -1,0 +1,27 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program14
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Баланс счета: ");
+            if (double.TryParse(Console.ReadLine(), out double balance))
+            {
+                if (balance < 0)
+                    Console.WriteLine("Задолженность!");
+                else
+                    Console.WriteLine("Баланс в норме.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода.");
+            }
+        }
+    }
+    }
