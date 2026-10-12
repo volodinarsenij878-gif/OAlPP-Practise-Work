@@ -1,0 +1,22 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program17
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Первое число: ");
+            if (!int.TryParse(Console.ReadLine(), out int a)) { Console.WriteLine("Ошибка."); return; }
+            Console.Write("Второе число: ");
+            if (!int.TryParse(Console.ReadLine(), out int b)) { Console.WriteLine("Ошибка."); return; }
+
+            int diff = a > b ? a - b : b - a;
+            Console.WriteLine($"Разность (большего и меньшего): {diff}");
+        }
+    }
+    }
