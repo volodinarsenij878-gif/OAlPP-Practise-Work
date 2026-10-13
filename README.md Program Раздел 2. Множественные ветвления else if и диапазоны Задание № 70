@@ -1,0 +1,29 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program70
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Дальность поездки (км): ");
+            if (double.TryParse(Console.ReadLine(), out double km) && km >= 0)
+            {
+                double cost;
+                if (km <= 5) cost = 200;
+                else if (km <= 15) cost = 200 + (km - 5) * 25;
+                else cost = 200 + 10 * 25 + (km - 15) * 20;
+
+                Console.WriteLine($"Стоимость: {cost:F2} руб.");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: км неотрицательны.");
+            }
+        }
+    }
+    }
