@@ -1,0 +1,30 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program71
+    {  
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Осадки (мм): ");
+            if (double.TryParse(Console.ReadLine(), out double rain) && rain >= 0)
+            {
+                string status;
+                if (rain == 0) status = "Без осадков";
+                else if (rain <= 4) status = "Слабый дождь";
+                else if (rain <= 15) status = "Умеренный";
+                else status = "Сильный ливень";
+
+                Console.WriteLine(status);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: осадки неотрицательны.");
+            }
+        }
+    }
+    }
