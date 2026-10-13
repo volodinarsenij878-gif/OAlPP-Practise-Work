@@ -1,0 +1,30 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program68
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Рейтинг Эло: ");
+            if (int.TryParse(Console.ReadLine(), out int elo) && elo >= 0)
+            {
+                string rank;
+                if (elo < 1400) rank = "Любитель";
+                else if (elo < 2000) rank = "Разрядник";
+                else if (elo < 2400) rank = "Мастер";
+                else rank = "Гроссмейстер";
+
+                Console.WriteLine(rank);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: рейтинг неотрицательный.");
+            }
+        }
+    }
+    }
