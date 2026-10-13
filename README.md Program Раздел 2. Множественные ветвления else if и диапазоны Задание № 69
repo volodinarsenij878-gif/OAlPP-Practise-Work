@@ -1,0 +1,30 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program69
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Число: ");
+            if (int.TryParse(Console.ReadLine(), out int n))
+            {
+                n = Math.Abs(n);
+                string digits;
+                if (n < 10) digits = "Однозначное";
+                else if (n < 100) digits = "Двузначное";
+                else if (n < 1000) digits = "Трехзначное";
+                else digits = "Более трех цифр";
+
+                Console.WriteLine(digits);
+            }
+            else
+            {
+                Console.WriteLine("Ошибка ввода.");
+            }
+        }
+        }
