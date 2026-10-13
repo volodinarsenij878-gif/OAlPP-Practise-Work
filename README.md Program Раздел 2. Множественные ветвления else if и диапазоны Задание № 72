@@ -1,0 +1,52 @@
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program72
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Введите процент выполнения плана продаж: ");
+
+            // Проверяем, что введено корректное число
+            if (double.TryParse(Console.ReadLine(), out double percent))
+            {
+                string status;
+
+                if (percent < 0)
+                {
+                    Console.WriteLine("Ошибка: процент не может быть отрицательным.");
+                    return;
+                }
+                else if (percent < 70)
+                {
+                    status = "План сорван";
+                }
+                else if (percent <= 99)
+                {
+                    // Сюда попадают значения от 70 до 99 включительно
+                    status = "Удовлетворительно";
+                }
+                else if (percent <= 119)
+                {
+                    // Сюда попадают значения от 100 до 119 включительно
+                    status = "Выполнен";
+                }
+                else // percent >= 120
+                {
+                    status = "Перевыполнен";
+                }
+
+                Console.WriteLine($"Статус: {status}");
+            }
+            else
+            {
+                Console.WriteLine("Ошибка: введите корректное число.");
+            }
+        }
+    }
+    }
